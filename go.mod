@@ -1,3 +1,3 @@
-module github.com/golang-jwt/jwt/v5
+module github.com/petrvnk/jwt-test
 
 go 1.18
