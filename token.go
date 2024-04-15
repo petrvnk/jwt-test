@@ -17,7 +17,7 @@ type Keyfunc func(*Token) (interface{}, error)
 
 // VerificationKey represents a public or secret key for verifying a token's signature.
 type VerificationKey interface {
-	crypto.PublicKey | []uint8
+	crypto.PublicKey
 }
 
 // VerificationKeySet is a set of public or secret keys. It is used by the parser to verify a token.
