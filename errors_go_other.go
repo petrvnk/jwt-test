@@ -54,13 +54,13 @@ func newError(message string, err error, more ...error) error {
 	// bit creative. Basically, we are using %s instead of %w to produce the
 	// same error message and then throw the result into a custom error struct.
 	var format string
-	var args []any
+	var args []interface{}
 	if message != "" {
 		format = "%s: %s"
-		args = []any{err, message}
+		args = []interface{}{err, message}
 	} else {
 		format = "%s"
-		args = []any{err}
+		args = []interface{}{err}
 	}
 	errs := []error{err}
 
